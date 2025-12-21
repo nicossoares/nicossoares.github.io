@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: #f9f9f9;
+    }
+    .resume {
+      background: #fff;
+      padding: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #2c5282;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #2c5282;
+      margin-bottom: 8px;
+    }
+    .contact-info {
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .contact-info a { color: #2c5282; text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
+    section { margin-bottom: 28px; }
+    h2 {
+      font-size: 1.15rem;
+      color: #2c5282;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .summary { font-size: 0.95rem; color: #444; }
+    .entry { margin-bottom: 18px; }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .entry-title {
+      font-weight: 600;
+      color: #1a202c;
+      font-size: 1rem;
+    }
+    .entry-date {
+      color: #718096;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+    .entry-subtitle {
+      color: #4a5568;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 5px;
+      font-size: 0.92rem;
+      color: #4a5568;
+    }
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2c5282;
+    }
+    .link-placeholder {
+      color: #2c5282;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .skills-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .skill-row {
+      font-size: 0.92rem;
+      color: #4a5568;
+    }
+    .skill-category {
+      font-weight: 600;
+      color: #1a202c;
+    }
+    .awards-section p {
+      font-size: 0.92rem;
+      color: #4a5568;
+      margin-bottom: 8px;
+    }
+    .awards-section strong { color: #1a202c; }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <header>
+      <h1>Nicolas E. Soares</h1>
+      <div class="contact-info">
+        <a href="mailto:soares1@uw.edu">soares1@uw.edu</a> · 
+        <a href="https://www.linkedin.com/in/nicos-soares-biostatistics/">LinkedIn</a> · 
+        <a href="https://github.com/nicossoares">GitHub</a> · 
+        Seattle, WA
+      </div>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">MS Biostatistics student at the University of Washington with a double major in Mathematics and English (4.0 GPA). Experienced in statistical analysis, coding in R, hypothesis testing, regression, and various forms of writing. Seeking experience in using evidence-driven methods to further public health research, particularly in clinical trials and chronic illnesses within nonprofit or government settings.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">MS Biostatistics Capstone Program</span>
+          <span class="entry-date">2025 – 2027</span>
+        </div>
+        <div class="entry-subtitle">University of Washington</div>
+        <ul>
+          <li>Training in topics such as probability, statistical inference, linear models, and regression.</li>
+          <li>Gaining experience in R through coursework and applied analysis projects.</li>
+          <li>Pursuing the data science pathway, with courses on data analysis in epidemiology, machine learning, and biomedical data science.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Double Major in English and Mathematics</span>
+          <span class="entry-date">2021 – 2025</span>
+        </div>
+        <div class="entry-subtitle">University of Illinois, Springfield</div>
+        <ul>
+          <li>Graduated summa cum laude with a 4.0 GPA and recognition on the Dean's List. Named student program marshal for mathematics.</li>
+          <li>Coursework included statistical analysis and inference, regression, ANOVA, and advanced/vector calculus.</li>
+          <li>Completed qualitative analysis and communication projects including <a href="#" class="link-placeholder">comparing Irish folklore and music</a> and <a href="#" class="link-placeholder">creating a website portfolio of multimedia designs</a>.</li>
+          <li>Engaged diverse perspectives through projects on <a href="#" class="link-placeholder">overlooked female composers</a>, <a href="#" class="link-placeholder">the erasure of African American histories</a>, and <a href="#" class="link-placeholder">the objectification of women and animals</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Research Project: Effectiveness of ChatGPT's Poetry</span>
+          <span class="entry-date">2023 – 2024</span>
+        </div>
+        <ul>
+          <li>Applied statistical and linguistic analysis to evaluate ChatGPT's performance in an independent research project.</li>
+          <li>Developed methods for quantifying error in ChatGPT's adherence to poetic forms and syntactic guidelines.</li>
+          <li>Presented at the UIS STARS Symposium (<a href="#" class="link-placeholder">slides</a>) and received the Best Presentation in Humanities award.</li>
+          <li>Explained complex topics to general audiences in a <a href="#" class="link-placeholder">UIS media interview</a>.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Virtual Writing Groups, Coordinator and Facilitator</span>
+          <span class="entry-date">2020 – Present</span>
+        </div>
+        <ul>
+          <li>Created an inclusive environment for creative expression.</li>
+          <li>Facilitated group discussions, group projects, and designed engaging activities.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Equity, Diversity, and Inclusion Committee, Active Member</span>
+          <span class="entry-date">October 2025 – Present</span>
+        </div>
+        <ul>
+          <li>Collaborated on projects including a departmental coat swap.</li>
+          <li>Practice in multimedia, oral, and textual communication including flyers, emails, and discussion.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Silvies River Charter School, Volunteer Tutor and Study Hall Facilitator</span>
+          <span class="entry-date">2022 – 2024</span>
+        </div>
+        <ul>
+          <li>Explained math, English, and science topics by adapting educational approaches for different styles and abilities.</li>
+          <li>Developed understanding of ADHD, dyslexia, and dysgraphia to better support students.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Individual Virtual Tutoring, Math Tutor</span>
+          <span class="entry-date">2019 – 2025</span>
+        </div>
+        <ul>
+          <li>Identified and created solutions to student challenges using a variety of visual and oral explanations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="skill-category">Mathematics:</span> Statistical analysis, hypothesis testing, probability, regression, ANOVA, and data visualization.</div>
+        <div class="skill-row"><span class="skill-category">Technical:</span> Proficient in R, Excel, and LaTeX; familiar with Python; experienced with LLMs.</div>
+        <div class="skill-row"><span class="skill-category">Research & Communication:</span> Academic and multimedia writing, public speaking, tutoring, and facilitation.</div>
+      </div>
+    </section>
+
+    <section class="awards-section">
+      <h2>Awards & Publications</h2>
+      <p><strong>Publications:</strong> <a href="#" class="link-placeholder">NCTM MTLT Journal Publication</a> (2023), Featured in a <a href="#" class="link-placeholder">UIS News Article</a> (2024)</p>
+      <p><strong>Awards:</strong> UIS English Department's DEI Award (2025), Best Presentation in Humanities at UIS STARS Symposium (2024), <a href="#" class="link-placeholder">UIS Best Creative Writing Project</a> (2024), <a href="#" class="link-placeholder">Honorable Mention for Strogatz Prize</a> (2022)</p>
+    </section>
+  </div>
+</body>
+</html>
