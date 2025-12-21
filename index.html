@@ -1,127 +1,407 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
-
-We are borrowing this template for use with the capstone program
--->
-
 <html lang="en">
 <head>
-  <title>Nicos Soares</title> <!-- EDIT YOUR NAME HERE -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas E. Soares | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f9f9f9;
+    }
+    nav {
+      background: #2c5282;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      border-bottom-color: #fff;
+    }
+    .hero {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2c5282;
+    }
+    .hero-content h1 {
+      font-size: 2.4rem;
+      color: #2c5282;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .hero-content .tagline {
+      font-size: 1.15rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .hero-content p {
+      color: #4a5568;
+      margin-bottom: 25px;
+    }
+    .contact-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .contact-links a {
+      color: #2c5282;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #2c5282;
+      padding-bottom: 2px;
+      transition: color 0.3s;
+    }
+    .contact-links a:hover {
+      color: #1a365d;
+    }
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+    section {
+      background: #fff;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      font-size: 1.4rem;
+      color: #2c5282;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .interest-item h3 {
+      font-size: 1rem;
+      color: #1a202c;
+      margin-bottom: 8px;
+    }
+    .interest-item p {
+      font-size: 0.95rem;
+      color: #4a5568;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #718096;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-photo { margin: 0 auto; }
+      .contact-links { justify-content: center; }
+      nav ul { gap: 20px; }
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
 
-
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#projects">Projects</a></li> 
-				  <li><a href="resume.pdf">Resume</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image (UPDATE YOUR OWN PHOTO TO THE REPO!) -->
-                <img class="img-responsive" src="Nicos Profile Pic 2025.jpg" alt=""><br>
-                
-		<!-- UPDATE THE TEXT BELOW HERE WITH YOUR OWN TEXT -->
-                <div style="margin-top:3%; text-align:justify;">
-					<!--
-					This is where you would introduce yourself. You might include links to things <a href="//google.com">RANDOM LINK TO GOOGLE</a>. You might have links to outside websites or things like your resume.
-					
-					You might also talk about groups that you have worked with (and perhaps link to them), and/or put your interests here!
-					
-					<p>The goal is to give potential employers some idea of who you are (to convince them that you are skilled, professional, and personable!) 
-					-->
-			
-			                <p> I am a master's student in Biostatistics at the University of Washington. I have a Bachelor's degree in mathematics and English from the University of Illinois, Springfield. My past experiences include an undergraduate research project under Dr. Hei-Chi Chan analyzing the effectiveness of ChatGPT's poetry; I presented at the UIS STARS Symposium and the project earned Best Presentation in Humanities. </p>
-					
-					<p> I am interested in biostatistics, and in particular working on public health research in a nonprofit/government setting. </p>
-			
-					<p> For more information about me, please check out my <a href="resume.pdf">resume</a>, or reach out via email or <a href="https://www.linkedin.com/in/noah-simon-04bb83bb">linkedin</a>.
-					
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Nicos Soares</b></div><br>
-                <p><b>soares1@uw.edu</b><br>
-                <p>Biostatistics Master's Student<br>
-		<p> University of Washington <br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://www.linkedin.com/in/noah-simon-04bb83bb">LinkedIn</a></dd>
-            </div>
-            
-		
-		            <!-- Projects -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="projects">Projects</h2>
-		<strong>Differential expression analysis with paraffin embedded (FFPE) tissue</strong><br>
-                <ul>
-                <li> Developed methods and software (in R) to calculate gene expression from probe-level microarray data using FFPE tissue samples. </li>
-		<li> Collaborated with biomarker scientists and employed this method/software to identify differentially expressed genes in breast tumor tissue (as compared to healthy control tissue).</li>
-		</ul>
-		<strong>Comparison of Machine Learning (ML) Methods for Survival Data</strong><br>
-                <ul>
-                <li> Developed a simulation study to compare ML methods for predicting survival outcome. </li>
-		<li> Wrote parallelized code (and deployed on AWS EC2) to efficiently run simulation study.</li>
-		</ul>
-		<strong><a href = "https://github.com/nrs02004/Jiujitsu-ELO">Ranking Models for Jiujitsu Competitors</a></strong><br>
-                <ul>
-                <li> Developed R/C++ code for efficiently fitting penalized conditional logistic regression. </li>
-		<li> Applied this to a novel dataset with ~2.5k competitors and ~8k matches to identify top competitors.</li>
-		<li> Empirically explored the impact of tuning parameter selection in this problem. </li>
-		</ul>
-		    
-
-            </div>
-
-            
-        </div>
-
-
+  <header class="hero">
+    <img class="profile-photo" src="Nicos Profile Pic 2025.jpg" alt="Nicolas E. Soares">
+    <div class="hero-content">
+      <h1>Nicolas E. Soares</h1>
+      <p class="tagline">MS Biostatistics · University of Washington</p>
+      <p>I use evidence-driven methods to further public health research, with particular interests in clinical trials and chronic illnesses. My background combines quantitative rigor with strong communication skills from my double major in Mathematics and English.</p>
+      <div class="contact-links">
+        <a href="mailto:nsoares@uw.edu">Email</a>
+        <a href="https://linkedin.com/in/nicossoares">LinkedIn</a>
+        <a href="https://github.com/nicossoares">GitHub</a>
+      </div>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
+  </header>
 
+  <main>
+    <section>
+      <h2>Research Interests</h2>
+      <div class="interests-grid">
+        <div class="interest-item">
+          <h3>Clinical Trials</h3>
+          <p>Design and analysis of trials for public health interventions.</p>
+        </div>
+        <div class="interest-item">
+          <h3>Chronic Illness</h3>
+          <p>Statistical methods for understanding long-term health outcomes.</p>
+        </div>
+        <div class="interest-item">
+          <h3>Data Science</h3>
+          <p>Machine learning and biomedical data science applications.</p>
+        </div>
+        <div class="interest-item">
+          <h3>Science Communication</h3>
+          <p>Making complex statistical findings accessible to broad audiences.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recent Highlights</h2>
+      <p style="color: #4a5568; margin-bottom: 15px;">Best Presentation in Humanities at UIS STARS Symposium (2024) for research on evaluating ChatGPT's poetry generation using statistical and linguistic analysis.</p>
+      <p style="color: #4a5568;">Published in the NCTM MTLT Journal (2023) and featured in UIS News (2024).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Nicolas E. Soares · Built with Quarto</p>
+  </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas E. Soares | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f9f9f9;
+    }
+    nav {
+      background: #2c5282;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      border-bottom-color: #fff;
+    }
+    .hero {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #718096;
+      font-size: 0.9rem;
+      border: 4px solid #2c5282;
+    }
+    .hero-content h1 {
+      font-size: 2.4rem;
+      color: #2c5282;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .hero-content .tagline {
+      font-size: 1.15rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .hero-content p {
+      color: #4a5568;
+      margin-bottom: 25px;
+    }
+    .contact-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .contact-links a {
+      color: #2c5282;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #2c5282;
+      padding-bottom: 2px;
+      transition: color 0.3s;
+    }
+    .contact-links a:hover {
+      color: #1a365d;
+    }
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+    section {
+      background: #fff;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      font-size: 1.4rem;
+      color: #2c5282;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .interest-item h3 {
+      font-size: 1rem;
+      color: #1a202c;
+      margin-bottom: 8px;
+    }
+    .interest-item p {
+      font-size: 0.95rem;
+      color: #4a5568;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #718096;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-photo { margin: 0 auto; }
+      .contact-links { justify-content: center; }
+      nav ul { gap: 20px; }
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2c5282;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <img class="profile-photo" src="Nicos Profile Pic 2025.jpg" alt="">
+    <div class="hero-content">
+      <h1>Your Name</h1>
+      <p class="tagline">MS Biostatistics · University of Washington</p>
+      <p>I use evidence-driven methods to further public health research, with particular interests in clinical trials and chronic illnesses. My background combines quantitative rigor with strong communication skills from my double major in Mathematics and English.</p>
+      <div class="contact-links">
+        <a href="mailto:email@uw.edu">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Research Interests</h2>
+      <div class="interests-grid">
+        <div class="interest-item">
+          <h3>Clinical Trials</h3>
+          <p>Design and analysis of trials for public health interventions.</p>
+        </div>
+        <div class="interest-item">
+          <h3>Chronic Illness</h3>
+          <p>Statistical methods for understanding long-term health outcomes.</p>
+        </div>
+        <div class="interest-item">
+          <h3>Data Science</h3>
+          <p>Machine learning and biomedical data science applications.</p>
+        </div>
+        <div class="interest-item">
+          <h3>Science Communication</h3>
+          <p>Making complex statistical findings accessible to broad audiences.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recent Highlights</h2>
+      <p style="color: #4a5568; margin-bottom: 15px;">Best Presentation in Humanities at UIS STARS Symposium (2024) for research on evaluating ChatGPT's poetry generation using statistical and linguistic analysis.</p>
+      <p style="color: #4a5568;">Published in the NCTM MTLT Journal (2023) and featured in UIS News (2024).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name · Built with Quarto</p>
+  </footer>
+</body>
 </html>
