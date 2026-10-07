@@ -4,7 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software | Nicolas E. Soares</title>
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    nav {
+      background: #2c5282;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      border-bottom-color: #fff;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    section {
+      background: #fff;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    section h1,
+    section h2 {
+      color: #2c5282;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    section h1 {
+      font-size: 1.8rem;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+    }
+
+    section h3 {
+      font-size: 1.1rem;
+      color: #1a202c;
+      margin: 25px 0 8px;
+    }
+
+    section p {
+      color: #4a5568;
+      margin-bottom: 15px;
+    }
+
+    section a {
+      color: #2c5282;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #718096;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 20px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      section {
+        padding: 30px 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -21,17 +128,16 @@
   <main>
 
     <section>
-      <h2>Software</h2>
+      <h1>Software</h1>
 
       <p>
-        I am fluent in R, with projects including multiple forms of data visualization; a wide variety of analyses types; machine learning (such as ); among other topics. I also have a working proficiency in Python for data cleaning, including the condensation of large administrative datasets for easy accessibility in R. 
+        I primarily work in R, with additional experience in Python
+        for data cleaning and preprocessing.
       </p>
-
     </section>
 
     <section>
       <h2>Projects</h2>
-		<p>Select projects have synopses below, and some have public repositories viewable on GitHub. Some projects’ code is private due to pre-publication status or confidentiality.</p>
 
       <h3>natalityr</h3>
 
@@ -45,13 +151,31 @@
           View on GitHub
         </a>
       </p>
+    </section>
 
+    <section>
+      <h2>Programming Experience</h2>
+
+      <h3>R</h3>
+
+      <p>
+        Statistical analysis, data visualization, data manipulation,
+        reproducible research, and R package development.
+      </p>
+
+      <h3>Python</h3>
+
+      <p>
+        Data cleaning and preprocessing, particularly for large
+        administrative datasets that require processing before analysis
+        in R.
+      </p>
     </section>
 
   </main>
 
   <footer>
-    <p>© 2025 Nicolas E. Soares</p>
+    <p>© 2026 Nicolas E. Soares</p>
   </footer>
 
 </body>
