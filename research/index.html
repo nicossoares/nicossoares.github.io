@@ -4,7 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Nicolas E. Soares</title>
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    nav {
+      background: #2c5282;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      border-bottom-color: #fff;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    section {
+      background: #fff;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    section h1,
+    section h2 {
+      color: #2c5282;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    section h1 {
+      font-size: 1.8rem;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+    }
+
+    section h3 {
+      font-size: 1.1rem;
+      color: #1a202c;
+      margin: 25px 0 8px;
+    }
+
+    section p {
+      color: #4a5568;
+      margin-bottom: 15px;
+    }
+
+    section a {
+      color: #2c5282;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #718096;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 20px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      section {
+        padding: 30px 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -21,33 +128,56 @@
   <main>
 
     <section>
-      <h2>Current Projects</h2>
-
-      <h3>Racial Disparities in Cesarean Delivery</h3>
+      <h1>Research</h1>
 
       <p>
-        I have been working with Dr. Ellen Kauffman and Dr. Kathleen Kerr on the topic of the existing racial disparity within delivery methods. With the goal to locate where intervention efforts may be most warranted, our focus has been to provide meaningful insights into the racially disparate cesarean rates using the CDC NVSS natality microdata.
+        My recent research focuses on disparities in women's health, with a particular focus on
+        maternal health outcomes using CDC NVSS datasets.
+      </p>
+    </section>
+
+    <section>
+      <h2>Racial Disparities in Cesarean Delivery</h2>
+
+      <p>
+        I have been working with Dr. Ellen Kauffman and Dr. Kathleen Kerr
+        on racial disparities in delivery methods using CDC NVSS natality
+        microdata.
       </p>
 
       <p>
-        Over the past seven months, we have analyzed the racial disparity in cesarean and induction rates within an NTSV population, including the evaluation of these disparities by differing comorbidity burden. By stratifying into subgroups of race and comorbidity burden, our results aimed to evaluate the robustness of racial disparity in the context of comorbidity. Similarly, the consideration of disparate induction rates alongside the disparate cesarean rates may identify potential avenues of clinical intervention. This research has recently moved into the submission phase.
+        Our work examines racial disparities in cesarean and induction
+        rates within an NTSV population, including evaluation of these
+        disparities across differing levels of comorbidity burden.
       </p>
 
+      <p>
+        By stratifying by race and comorbidity burden, we aim to evaluate
+        the robustness of observed racial disparities in the context of
+        maternal health characteristics. Considering induction rates
+        alongside cesarean rates may also help identify potential avenues
+        for clinical intervention.
+      </p>
+
+      <p>
+        This research has recently moved into the submission phase.
+      </p>
     </section>
 
     <section>
       <h2>Trial of Labor After Cesarean</h2>
 
       <p>
-       We are also currently working on further research regarding trial of labor after cesarean (TOLAC) success rates among differing races and regions. The scope of our work with TOLAC is smaller, and uses the CDC NVSS aggregate dataset instead of the microdata due to regional variable restrictions.
+        We are also investigating trial of labor after cesarean (TOLAC)
+        success rates across racial and regional groups. This work uses the CDC NVSS aggregate dataset because of
+        restrictions on regional variables in the public-use microdata.
       </p>
-
     </section>
 
   </main>
 
   <footer>
-    <p>© 2025 Nicolas E. Soares</p>
+    <p>© 2026 Nicolas E. Soares</p>
   </footer>
 
 </body>
