@@ -53,20 +53,25 @@
       border-bottom-color: #fff;
     }
 
-    /* Main homepage area */
+    /* Main homepage */
     .hero {
       max-width: 850px;
       margin: 0 auto;
       padding: 50px 20px 40px;
     }
 
-    /* Photo + name + first paragraph */
-    .intro {
+    /* Photo left, identity right */
+    .profile-header {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
-      align-items: start;
-      margin-bottom: 30px;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .photo-side {
+      display: flex;
+      justify-content: center;
     }
 
     .profile-photo {
@@ -77,30 +82,28 @@
       border: 4px solid #2c5282;
     }
 
-    .hero-header {
-      margin-bottom: 0;
+    .identity-side {
+      text-align: left;
     }
 
-    .hero-header h1 {
+    .identity-side h1 {
       font-size: 2.4rem;
       color: #2c5282;
       margin-bottom: 5px;
       font-weight: 600;
     }
 
-    .hero-header .tagline {
+    .tagline {
       font-size: 1.15rem;
       color: #4a5568;
       margin-bottom: 18px;
       font-style: italic;
     }
 
-    /* Email / LinkedIn / GitHub */
     .contact-links {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 22px;
     }
 
     .contact-links a {
@@ -108,42 +111,32 @@
       text-decoration: underline;
       text-underline-offset: 3px;
       font-size: 0.95rem;
-      transition: color 0.3s;
     }
 
     .contact-links a:hover {
       color: #2c5282;
     }
 
-    /* First paragraph */
-    .hero-content p {
+    /* All biography text */
+    .bio {
       color: #4a5568;
-      margin-bottom: 0;
+      text-align: left;
     }
 
-    /* Links in body text */
-    .hero-content p a,
-    .remaining-content a {
+    .bio p {
+      margin-bottom: 20px;
+    }
+
+    .bio a {
       color: inherit;
       text-decoration: underline;
       text-underline-offset: 2px;
     }
 
-    .hero-content p a:hover,
-    .remaining-content a:hover {
+    .bio a:hover {
       color: #2c5282;
     }
 
-    /* Remaining paragraphs */
-    .remaining-content {
-      color: #4a5568;
-    }
-
-    .remaining-content p {
-      margin-bottom: 20px;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       padding: 30px;
@@ -152,17 +145,13 @@
       border-top: 1px solid #e2e8f0;
     }
 
-    /* Mobile */
     @media (max-width: 600px) {
-      .intro {
+      .profile-header {
         grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .profile-photo {
-        margin: 0 auto 25px;
-      }
-
-      .hero-header {
+      .identity-side {
         text-align: center;
       }
 
@@ -179,7 +168,6 @@
 
 <body>
 
-  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -189,54 +177,49 @@
     </ul>
   </nav>
 
-  <!-- Homepage content -->
   <header class="hero">
 
-    <!-- Photo, name, affiliation, links, and first paragraph -->
-    <div class="intro">
+    <!-- Top: photo left, name/info right -->
+    <div class="profile-header">
 
-      <img
-        class="profile-photo"
-        src="Nicos Profile Pic 2025.jpg"
-        alt="Nicolas E. Soares"
-      >
-
-      <div>
-
-        <div class="hero-header">
-          <h1>Nicolas E. Soares</h1>
-          <p class="tagline">MS Biostatistics · University of Washington</p>
-
-          <div class="contact-links">
-            <a href="mailto:soares1@uw.edu">Email</a>
-            <a
-              href="https://www.linkedin.com/in/nicos-soares-biostatistics/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >LinkedIn</a>
-            <a
-              href="https://github.com/nicossoares"
-              target="_blank"
-              rel="noopener noreferrer"
-            >GitHub</a>
-          </div>
-        </div>
-
-        <div class="hero-content">
-          <p>
-            I am a Biostatistics MS Capstone student at the University of Washington,
-            and my undergraduate degree was a BA in mathematics and English from the
-            University of Illinois, Springfield. My professional interests include
-            observational research, particularly in the context of administrative
-            and survey-based data.
-          </p>
-        </div>
-
+      <div class="photo-side">
+        <img
+          class="profile-photo"
+          src="Nicos Profile Pic 2025.jpg"
+          alt="Nicolas E. Soares"
+        >
       </div>
+
+      <div class="identity-side">
+        <h1>Nicolas E. Soares</h1>
+
+        <p class="tagline">
+          MS Biostatistics · University of Washington
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:soares1@uw.edu">Email</a>
+          <a href="https://www.linkedin.com/in/nicos-soares-biostatistics/"
+             target="_blank"
+             rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/nicossoares"
+             target="_blank"
+             rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Full-width remaining text -->
-    <div class="remaining-content">
+    <!-- Everything below is full-width and left-aligned -->
+    <div class="bio">
+
+      <p>
+        I am a Biostatistics MS Capstone student at the University of Washington,
+        and my undergraduate degree was a BA in mathematics and English from the
+        University of Illinois, Springfield. My professional interests include
+        observational research, particularly in the context of administrative
+        and survey-based data.
+      </p>
 
       <p>
         During my time as an MS student, I have received training in various
