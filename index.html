@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,14 +54,14 @@
       border-bottom-color: #fff;
     }
 
-    /* Main homepage */
-    .hero {
+    /* Main content */
+    main {
       max-width: 850px;
       margin: 0 auto;
-      padding: 50px 20px 40px;
+      padding: 50px 20px 60px;
     }
 
-    /* Photo left, identity right */
+    /* Profile header */
     .profile-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -94,13 +95,14 @@
       font-weight: 600;
     }
 
-    .tagline {
+    .identity-side .tagline {
       font-size: 1.15rem;
       color: #4a5568;
       margin-bottom: 18px;
       font-style: italic;
     }
 
+    /* Contact links */
     .contact-links {
       display: flex;
       gap: 20px;
@@ -118,26 +120,34 @@
       color: #2c5282;
     }
 
-    /* All biography text */
-    .bio {
+    /* Bio box — matching Research page sections */
+    section {
+      background: #fff;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    section p {
       color: #4a5568;
-      text-align: left;
+      margin-bottom: 15px;
     }
 
-    .bio p {
-      margin-bottom: 20px;
+    section p:last-child {
+      margin-bottom: 0;
     }
 
-    .bio a {
+    section a {
       color: inherit;
       text-decoration: underline;
       text-underline-offset: 2px;
     }
 
-    .bio a:hover {
+    section a:hover {
       color: #2c5282;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 30px;
@@ -146,10 +156,24 @@
       border-top: 1px solid #e2e8f0;
     }
 
+    /* Mobile */
     @media (max-width: 600px) {
+      nav ul {
+        gap: 20px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
       .profile-header {
         grid-template-columns: 1fr;
         gap: 25px;
+      }
+
+      .photo-side {
+        justify-content: center;
+        padding-left: 0;
       }
 
       .identity-side {
@@ -160,8 +184,8 @@
         justify-content: center;
       }
 
-      nav ul {
-        gap: 20px;
+      section {
+        padding: 30px 25px;
       }
     }
   </style>
@@ -169,6 +193,7 @@
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -178,9 +203,9 @@
     </ul>
   </nav>
 
-  <header class="hero">
+  <main>
 
-    <!-- Top: photo left, name/info right -->
+    <!-- Profile -->
     <div class="profile-header">
 
       <div class="photo-side">
@@ -200,19 +225,25 @@
 
         <div class="contact-links">
           <a href="mailto:soares1@uw.edu">Email</a>
-          <a href="https://www.linkedin.com/in/nicos-soares-biostatistics/"
-             target="_blank"
-             rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/nicossoares"
-             target="_blank"
-             rel="noopener noreferrer">GitHub</a>
+
+          <a
+            href="https://www.linkedin.com/in/nicos-soares-biostatistics/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn</a>
+
+          <a
+            href="https://github.com/nicossoares"
+            target="_blank"
+            rel="noopener noreferrer"
+          >GitHub</a>
         </div>
       </div>
 
     </div>
 
-    <!-- Everything below is full-width and left-aligned -->
-    <div class="bio">
+    <!-- Biography -->
+    <section>
 
       <p>
         I am a Biostatistics MS Capstone student at the University of Washington,
@@ -236,13 +267,13 @@
         <a href="https://www.doximity.com/pub/ellen-kauffman-md">Dr. Ellen Kauffman</a>
         and
         <a href="https://www.biostat.washington.edu/people/kathleen-kerr">Dr. Kathleen Kerr</a>
-        to analyze the existing racial disparity within cesarean rates. This
-        research utilized the CDC NVSS natality microdata, and involved an
-        analysis of cesarean rate racial disparities in the context of induction
-        rates, comorbidity burden, and trial of labor status. This research has
-        allowed me to gain experience working with large administrative datasets,
-        communicating with collaborators, and contributing to written and visual
-        summaries of our findings.
+        to analyze the existing racial disparity within cesarean rates.
+        This research utilized the CDC NVSS natality microdata, and involved
+        an analysis of cesarean rate racial disparities in the context of
+        induction rates, comorbidity burden, and trial of labor status.
+        This research has allowed me to gain experience working with large
+        administrative datasets, communicating with collaborators, and
+        contributing to written and visual summaries of our findings.
       </p>
 
       <p>
@@ -253,9 +284,9 @@
         engagement, and foster a welcoming environment.
       </p>
 
-    </div>
+    </section>
 
-  </header>
+  </main>
 
   <footer>
     <p>© 2026 Nicolas E. Soares</p>
@@ -263,3 +294,4 @@
 
 </body>
 </html>
+```
