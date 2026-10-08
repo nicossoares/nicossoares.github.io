@@ -1,232 +1,267 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicolas E. Soares | Portfolio</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
-    line-height: 1.7;
-    color: #333;
-    background: #f9f9f9;
-  }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  nav {
-    background: #2c5282;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    padding: 5px 0;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
-  }
-
-  nav a:hover, nav a.active {
-    border-bottom-color: #fff;
-  }
-
-  .hero {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 50px 20px 40px;
-  }
-
-  .hero-header {
-    margin-bottom: 35px;
-  }
-
-  .hero-header h1 {
-    font-size: 2.4rem;
-    color: #2c5282;
-    margin-bottom: 5px;
-    font-weight: 600;
-  }
-
-  .hero-header .tagline {
-    font-size: 1.15rem;
-    color: #4a5568;
-    margin-bottom: 18px;
-    font-style: italic;
-  }
-
-  .contact-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .contact-links a {
-    color: #333;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-  }
-
-  .contact-links a:hover {
-    color: #2c5282;
-  }
-
-  .intro {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 40px;
-    align-items: start;
-  }
-
-  .profile-photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #2c5282;
-  }
-
-  .hero-content p {
-    color: #4a5568;
-    margin-bottom: 20px;
-  }
-
-  /* Links within the body text */
-  .hero-content p a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .hero-content p a:hover {
-    color: #2c5282;
-  }
-
-  main {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 0 20px 60px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 30px;
-    color: #718096;
-    font-size: 0.9rem;
-    border-top: 1px solid #e2e8f0;
-  }
-
-  @media (max-width: 600px) {
-    .intro {
-      grid-template-columns: 1fr;
+    body {
+      font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f9f9f9;
     }
 
-    .profile-photo {
-      margin: 0 auto 25px;
-    }
-
-    .hero-header {
-      text-align: center;
-    }
-
-    .contact-links {
-      justify-content: center;
+    /* Navigation bar */
+    nav {
+      background: #2c5282;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     nav ul {
-      gap: 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
     }
-  }
-</style>
 
-<header class="hero">
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
 
-  <div class="hero-header">
-    <h1>Nicolas E. Soares</h1>
-    <p class="tagline">MS Biostatistics · University of Washington</p>
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #fff;
+    }
 
-    <div class="contact-links">
-      <a href="mailto:soares1@uw.edu">Email</a>
-      <a href="https://www.linkedin.com/in/nicos-soares-biostatistics/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/nicossoares" target="_blank" rel="noopener noreferrer">GitHub</a>
+    /* Main header */
+    .hero {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 50px 20px 40px;
+    }
+
+    .hero-header {
+      margin-bottom: 35px;
+    }
+
+    .hero-header h1 {
+      font-size: 2.4rem;
+      color: #2c5282;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .hero-header .tagline {
+      font-size: 1.15rem;
+      color: #4a5568;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+
+    /* Email / LinkedIn / GitHub */
+    .contact-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .contact-links a:hover {
+      color: #2c5282;
+    }
+
+    /* Photo + introductory text */
+    .intro {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2c5282;
+    }
+
+    .hero-content p {
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
+
+    /* Links within body text */
+    .hero-content p a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .hero-content p a:hover {
+      color: #2c5282;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #718096;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        margin: 0 auto 25px;
+      }
+
+      .hero-header {
+        text-align: center;
+      }
+
+      .contact-links {
+        justify-content: center;
+      }
+
+      nav ul {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="research/">Research</a></li>
+      <li><a href="software/">Software</a></li>
+      <li><a href="./resume/index.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Homepage header -->
+  <header class="hero">
+
+    <div class="hero-header">
+      <h1>Nicolas E. Soares</h1>
+      <p class="tagline">MS Biostatistics · University of Washington</p>
+
+      <div class="contact-links">
+        <a href="mailto:soares1@uw.edu">Email</a>
+        <a href="https://www.linkedin.com/in/nicos-soares-biostatistics/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/nicossoares" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
-  </div>
 
-  <div class="intro">
+    <div class="intro">
 
-    <img
-      class="profile-photo"
-      src="Nicos Profile Pic 2025.jpg"
-      alt="Nicolas E. Soares"
-    >
+      <img
+        class="profile-photo"
+        src="Nicos Profile Pic 2025.jpg"
+        alt="Nicolas E. Soares"
+      >
 
-    <div class="hero-content">
+      <div class="hero-content">
 
-      <p>
-        I am a Biostatistics MS Capstone student at the University of Washington,
-        and my undergraduate degree was a BA in mathematics and English from the
-        University of Illinois, Springfield. My professional interests include
-        observational research, particularly in the context of administrative
-        and survey-based data.
-      </p>
+        <p>
+          I am a Biostatistics MS Capstone student at the University of Washington,
+          and my undergraduate degree was a BA in mathematics and English from the
+          University of Illinois, Springfield. My professional interests include
+          observational research, particularly in the context of administrative
+          and survey-based data.
+        </p>
 
-      <p>
-        During my time as an MS student, I have received training in various
-        forms of statistical analyses, data visualization, and communicating
-        results. Some courses and projects have involved longitudinal data;
-        machine learning and regression; missing data methods; and more. I am
-        fluent in R and have a working proficiency in Python for data
-        pre-processing.
-      </p>
+        <p>
+          During my time as an MS student, I have received training in various
+          forms of statistical analyses, data visualization, and communicating
+          results. Some courses and projects have involved longitudinal data;
+          machine learning and regression; missing data methods; and more. I am
+          fluent in R and have a working proficiency in Python for data
+          pre-processing.
+        </p>
 
-      <p>
-        Outside of courses, I have worked on research with
-        <a href="https://www.doximity.com/pub/ellen-kauffman-md">Dr. Ellen Kauffman</a>
-        and
-        <a href="https://www.biostat.washington.edu/people/kathleen-kerr">Dr. Kathleen Kerr</a>
-        to analyze the existing racial disparity within cesarean rates. This
-        research utilized the CDC NVSS natality microdata, and involved an
-        analysis of cesarean rate racial disparities in the context of induction
-        rates, comorbidity burden, and trial of labor status. This research has
-        allowed me to gain experience working with large administrative datasets,
-        communicating with collaborators, and contributing to written and visual
-        summaries of our findings.
-      </p>
+        <p>
+          Outside of courses, I have worked on research with
+          <a href="https://www.doximity.com/pub/ellen-kauffman-md">Dr. Ellen Kauffman</a>
+          and
+          <a href="https://www.biostat.washington.edu/people/kathleen-kerr">Dr. Kathleen Kerr</a>
+          to analyze the existing racial disparity within cesarean rates. This
+          research utilized the CDC NVSS natality microdata, and involved an
+          analysis of cesarean rate racial disparities in the context of induction
+          rates, comorbidity burden, and trial of labor status. This research has
+          allowed me to gain experience working with large administrative datasets,
+          communicating with collaborators, and contributing to written and visual
+          summaries of our findings.
+        </p>
 
-      <p>
-        Beyond research and courses, I currently hold the role of a Statistics
-        Tutor at UW. I am also on two committees relating to diversity and
-        equity; I have worked with the communities in both my current and
-        previous university departments to promote inclusion, create community
-        engagement, and foster a welcoming environment.
-      </p>
+        <p>
+          Beyond research and courses, I currently hold the role of a Statistics
+          Tutor at UW. I am also on two committees relating to diversity and
+          equity; I have worked with the communities in both my current and
+          previous university departments to promote inclusion, create community
+          engagement, and foster a welcoming environment.
+        </p>
 
+      </div>
     </div>
-  </div>
 
-</header>
+  </header>
 
   <main>
+  </main>
 
   <footer>
     <p>© 2026 Nicolas E. Soares</p>
   </footer>
+
 </body>
 </html>
+```
+
+The resulting hierarchy is:
+
+**Blue navigation bar**
+→ **Nicolas E. Soares**  
+→ *MS Biostatistics · University of Washington*  
+→ Email · LinkedIn · GitHub  
+→ **Photo | First paragraph + remaining bio**
+
+And importantly, the `<header>` now correctly sits inside `<body>`, rather than inside `<head>`.
