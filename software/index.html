@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software | Nicolas E. Soares</title>
+  <title>Research | Nicolas E. Soares</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -54,7 +54,7 @@
 
     section {
       background: #fff;
-      padding: 40px;
+      padding: 30px;
       margin-bottom: 30px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
@@ -70,6 +70,11 @@
     section h1 {
       font-size: 1.8rem;
     }
+    .page-title {
+      color: #2c5282;
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 35px;}
 
     section h2 {
       font-size: 1.4rem;
@@ -86,9 +91,7 @@
       margin-bottom: 15px;
     }
 
-    section a {
-      color: #2c5282;
-    }
+    section a {color: #4a5568;}
 
     footer {
       text-align: center;
@@ -119,56 +122,42 @@
   <nav>
     <ul>
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../research/">Research</a></li>
-      <li><a href="index.html" class="active">Software</a></li>
+      <li><a href="index.html" class="active">Research</a></li>
+      <li><a href="../software/">Software</a></li>
       <li><a href="../resume/">Resume</a></li>
     </ul>
   </nav>
 
   <main>
-
+    <h1 class="page-title">Software</h1>
+    
     <section>
-      <h1>Software</h1>
 
       <p>
-        I primarily work in R, with additional experience in Python
-        for data cleaning and preprocessing.
+        I am fluent in R and have completed multiple projects involving statistical analysis,
+        data visualization, R package development, and machine learning. I have used a wide array of methods and libraries
+        for a variety of projects, and learn quickly with new material as well. 
+      </p>
+      
+      <p>
+        I additionally have familiarity with Python, particularly for data cleaning and pre-processing. 
+        Some projects I have worked on have involved large administrative datasets that 
+        required pre-processing before analysis in R.
       </p>
     </section>
 
     <section>
       <h2>Projects</h2>
 
-      <h3>natalityr</h3>
+      <h3><a href="https://nicossoares.github.io/natalityr/articles/natalityr.html">natalityr</a></h3>
 
       <p>
-        An R package for importing, processing, and analyzing CDC
-        Natality Public Use Files.
-      </p>
-
+        An R package for preparing and classifying CDC NVSS natality microdata from 2016–2024. 
+        Provides functions for birth classification; data importation and filtering; and cesarean rate summaries.</p>
       <p>
-        <a href="https://github.com/nicossoares/natalityr" target="_blank">
-          View on GitHub
-        </a>
-      </p>
-    </section>
-
-    <section>
-      <h2>Programming Experience</h2>
-
-      <h3>R</h3>
-
-      <p>
-        Statistical analysis, data visualization, data manipulation,
-        reproducible research, and R package development.
-      </p>
-
-      <h3>Python</h3>
-
-      <p>
-        Data cleaning and preprocessing, particularly for large
-        administrative datasets that require processing before analysis
-        in R.
+        This package demonstrates a cross-language integration between R and Python, using libraries such as pyarrow and 
+        <a href="https://rstudio.github.io/reticulate/">reticulate</a>. This process extracts selected variables 
+        and converts the resulting data to a Parquet format for efficient storage and access within R.
       </p>
     </section>
 
