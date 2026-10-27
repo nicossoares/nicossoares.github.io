@@ -235,8 +235,15 @@
         padding: 25px 18px;
       }
 
-      .contact-info {
-        font-size: 0.85rem;
+      .contact-info a {
+        color: #2c5282;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-info a:hover {
+        color: #1a365d;
+        text-decoration: underline;
       }
     }
 
@@ -293,10 +300,13 @@
 
     <header class="cv-header">
       <h1>Nicolas E. Soares</h1>
-      <div class="legal-name">Legal Name: Helena Soares</div>
-      <div class="contact-info">
-        Seattle, WA · (503) 798-5739 · soares1@uw.edu · linkedin.com/in/nicos-soares
-      </div>
+    <div class="contact-info">
+      Seattle, WA ·
+      <a href="mailto:soares1@uw.edu">soares1@uw.edu</a> ·
+      <a href="https://www.linkedin.com/in/nicos-soares/"
+         target="_blank"
+         rel="noopener noreferrer">LinkedIn</a>
+    </div>
     </header>
 
     <!-- EDUCATION -->
