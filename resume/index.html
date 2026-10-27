@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Resume | Nicolas E. Soares</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
@@ -14,14 +20,59 @@
       background: #f9f9f9;
     }
 
+    /* Navigation */
+    nav {
+      background: #2c5282;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    nav li {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    nav li::before {
+      content: none;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #fff;
+    }
+
+    /* Main resume container */
     .resume {
       max-width: 850px;
       margin: 40px auto;
-      background: #fff;
       padding: 50px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
 
+    /* Header */
     header.cv-header {
       text-align: center;
       margin-bottom: 30px;
@@ -45,9 +96,13 @@
     .contact-info {
       color: #666;
       font-size: 0.95rem;
+      overflow-wrap: anywhere;
     }
 
-    section { margin-bottom: 28px; }
+    /* Resume sections */
+    section {
+      margin-bottom: 28px;
+    }
 
     h2 {
       font-size: 1.15rem;
@@ -59,7 +114,10 @@
       margin-bottom: 14px;
     }
 
-    .entry { margin-bottom: 18px; }
+    .entry {
+      margin-bottom: 18px;
+      break-inside: avoid;
+    }
 
     .entry-header {
       display: flex;
@@ -89,12 +147,13 @@
       margin-bottom: 6px;
     }
 
+    /* Lists */
     ul {
       list-style: none;
       padding-left: 0;
     }
 
-    li {
+    .resume li {
       position: relative;
       padding-left: 18px;
       margin-bottom: 5px;
@@ -102,13 +161,22 @@
       color: #4a5568;
     }
 
-    li::before {
+    .resume li::before {
       content: "•";
       position: absolute;
       left: 0;
       color: #2c5282;
     }
 
+    /* Publications */
+    .publication-subheading {
+      font-weight: 600;
+      color: #1a202c;
+      margin: 18px 0 8px;
+      font-size: 0.98rem;
+    }
+
+    /* Skills */
     .skills-grid {
       display: grid;
       gap: 10px;
@@ -124,45 +192,103 @@
       color: #1a202c;
     }
 
-    .publication-subheading {
-      font-weight: 600;
-      color: #1a202c;
-      margin: 12px 0 6px;
-      font-size: 0.96rem;
-    }
-
-    .awards-section p {
-      font-size: 0.92rem;
-      color: #4a5568;
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 600px) {
-      .resume {
-        padding: 30px 20px;
-        margin: 20px 10px;
+    /* Responsive layout */
+    @media (max-width: 700px) {
+      nav {
+        padding: 15px 20px;
       }
 
-      .entry-header { display: block; }
-      .entry-date { display: block; }
+      nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .resume {
+        margin: 20px 12px;
+        padding: 30px 25px;
+      }
+
+      .entry-header {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .entry-date {
+        white-space: normal;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
     }
 
+    @media (max-width: 400px) {
+      nav ul {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .resume {
+        padding: 25px 18px;
+      }
+
+      .contact-info {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Print styling */
     @media print {
-      body { background: #fff; }
+      body {
+        background: #fff;
+        color: #000;
+        font-size: 10pt;
+      }
+
+      nav {
+        display: none;
+      }
 
       .resume {
         max-width: none;
         margin: 0;
-        padding: 0.4in;
+        padding: 0;
         box-shadow: none;
       }
 
-      section, .entry { break-inside: avoid; }
+      header.cv-header {
+        border-bottom-color: #2c5282;
+      }
+
+      section {
+        break-inside: auto;
+      }
+
+      .entry {
+        break-inside: avoid;
+      }
+
+      h2 {
+        break-after: avoid;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../research/">Research</a></li>
+      <li><a href="../software/">Software</a></li>
+      <li><a href="index.html" class="active" aria-current="page">Resume</a></li>
+    </ul>
+  </nav>
+
   <main class="resume">
 
     <header class="cv-header">
@@ -173,6 +299,7 @@
       </div>
     </header>
 
+    <!-- EDUCATION -->
     <section>
       <h2>Education</h2>
 
@@ -181,32 +308,247 @@
           <span class="entry-title">M.S. in Biostatistics, Capstone Program</span>
           <span class="entry-date">2025–2027 (Expected)</span>
         </div>
+
         <div class="entry-subtitle">
           University of Washington, Seattle, WA · GPA: 3.78
         </div>
+
         <ul>
-          <li>Graduate coursework in statistical inference, regression modeling, probability, combinatorics, longitudinal data analysis, missing data methods, and data visualization.</li>
-          <li>Applied R programming for model diagnostics, validation, interpretation, and reproducible research workflows.</li>
+          <li>
+            Graduate coursework in statistical inference, regression modeling,
+            probability, combinatorics, longitudinal data analysis, missing data
+            methods, and data visualization.
+          </li>
+          <li>
+            Applied R programming for model diagnostics, validation,
+            interpretation, and reproducible research workflows.
+          </li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">B.A. in Mathematics and English (Double Major)</span>
+          <span class="entry-title">
+            B.A. in Mathematics and English (Double Major)
+          </span>
           <span class="entry-date">2021–2025</span>
         </div>
+
         <div class="entry-subtitle">
           University of Illinois Springfield, Springfield, IL · GPA: 4.0
         </div>
+
         <ul>
           <li>Graduated summa cum laude.</li>
           <li>Dean's List for 2021–2025.</li>
           <li>Named the Student Program Marshal for Mathematical Sciences.</li>
-          <li>Awarded the UIS English Department’s DEI Award (2025) and Best Creative Writing Project (2024).</li>
+          <li>
+            Awarded the UIS English Department’s DEI Award (2025) and Best
+            Creative Writing Project (2024).
+          </li>
         </ul>
       </div>
     </section>
 
+    <!-- RESEARCH EXPERIENCE -->
+    <section>
+      <h2>Research Experience</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">
+            Racial Disparities in Cesarean Birth in the United States
+          </span>
+          <span class="entry-date">March 2026–Present</span>
+        </div>
+
+        <div class="entry-subtitle">
+          Affiliation: University of Washington<br>
+          Collaborators: Dr. Ellen Kauffman (Clinician), Dr. Kathleen Kerr
+          (Biostatistician)
+        </div>
+
+        <ul>
+          <li>
+            Analyze CDC National Vital Statistics System (NVSS) natality data
+            to investigate racial disparities in cesarean birth, induction of
+            labor, and birth pathways.
+          </li>
+          <li>
+            Develop and implement data preprocessing workflows in Python to
+            filter large public-use datasets, transform variables, and compress
+            files for efficient analysis.
+          </li>
+          <li>
+            Conduct stratified analyses in R and develop data visualizations
+            to characterize differences in birth outcomes across racial groups,
+            regions, and comorbidity burden.
+          </li>
+          <li>
+            Communicate analytical decisions and findings to clinical and
+            quantitative collaborators through visualizations and written
+            summaries.
+          </li>
+          <li>
+            Co-author a manuscript and a research letter examining racial
+            disparities in cesarean birth and trial of labor after cesarean
+            (TOLAC) and vaginal birth after cesarean (VBAC) outcomes.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">
+            DESC Evaluation of the STAR Center (Capstone Project)
+          </span>
+          <span class="entry-date">October 2026–Present</span>
+        </div>
+
+        <div class="entry-subtitle">
+          Affiliation: Downtown Emergency Service Center (DESC), University
+          of Washington<br>
+          Collaborators: Josh Manandhar (MS Student), Tariq Cisse (MS Student)
+        </div>
+
+        <ul>
+          <li>
+            Work with the Downtown Emergency Service Center (DESC) to analyze
+            the effectiveness of the Stability Through Access and Resources
+            (STAR) Center, alongside its accessibility among varying
+            demographics.
+          </li>
+          <li>
+            Draft a statistical analysis plan (SAP) for future work in data
+            preprocessing, missing data methods, descriptive analyses, and
+            statistical analyses.
+          </li>
+          <li>
+            Create a project management plan (PMP) for even distribution of
+            workload, ensuring utilization of individuals’ specific skills.
+          </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">
+            Evaluating ChatGPT-Generated Poetry (Independent Project)
+          </span>
+          <span class="entry-date">2023–2024</span>
+        </div>
+
+        <div class="entry-subtitle">
+          Affiliation: University of Illinois Springfield<br>
+          Supervisor: Dr. Hei-Chi Chan
+        </div>
+
+        <ul>
+          <li>
+            Designed a study evaluating AI-generated poetry using structured
+            linguistic and statistical criteria.
+          </li>
+          <li>
+            Presented findings at the UIS STARS Symposium and discussed the
+            project in an interview with the UIS AI Campus Learning Community.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MANUSCRIPTS, PRESENTATIONS, AND PUBLICATIONS -->
+    <section>
+      <h2>Research Manuscripts, Presentations, and Poetry Publication</h2>
+
+      <div class="publication-subheading">Manuscripts in Preparation</div>
+
+      <ul>
+        <li>
+          Kauffman, E., Soares, Nicolas E., &amp; Kerr, K.
+          <em>Racial Disparity in Cesarean Birth and Induction of Labor</em>
+          (working title). Article in preparation for
+          <em>Journal of Racial and Ethnic Disparities</em>.
+        </li>
+        <li>
+          Kauffman, E., Soares, Nicolas E., &amp; Kerr, K.
+          <em>TOLAC, VBAC, and TOLAC Success Rates in Reference to Race and Region</em>
+          (working title). Research letter in preparation for
+          <em>Obstetrics &amp; Gynecology</em> (the Green Journal).
+        </li>
+      </ul>
+
+      <div class="publication-subheading">Symposium Presentation</div>
+
+      <ul>
+        <li>
+          Soares, Nicolas E. (2024). “Evaluating ChatGPT's Capabilities in
+          Form-Based Poetry Generation.” UIS STARS Symposium. Awarded Best
+          Presentation in Humanities.
+        </li>
+      </ul>
+
+      <div class="publication-subheading">Poetry Publications</div>
+
+      <ul>
+        <li>
+          Soares, Nicos. (2025). “If We Want to Last.”
+          <em>Violet Margin</em>, University of Illinois at Springfield.
+        </li>
+        <li>
+          Soares, Helena [Nicolas]. (2023). “Poetic Equations.”
+          <em>Mathematics Teacher: Learning and Teaching PK-12</em>,
+          National Council of Teachers of Mathematics.
+        </li>
+        <li>
+          Soares, Helena [Nicolas]. (2021).
+          “This Fundamental Theorem - A Found Poem.” Honorable mention from
+          the Steven H. Strogatz Prize for Math Communication, National Museum
+          of Math.
+        </li>
+        <li>
+          Soares, Helena [Nicolas]. (2019 and 2020). “Nature” and
+          “The Water Bear Sonnet.” Winner of the student poetry contest,
+          Oregon Poetry Association.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SKILLS AND TRAINING -->
+    <section>
+      <h2>Skills and External Training</h2>
+
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-category">Statistics:</span>
+          Regression and generalized linear models; statistical inference;
+          resampling and cross-validation; longitudinal and missing data
+          methods; machine learning; data visualization; design of statistical
+          analysis plans (SAPs).
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-category">Software:</span>
+          Fluent in R; proficient in Python for data preprocessing and select
+          machine learning methods; Excel; proficient in LaTeX; working
+          proficiency in HTML.
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-category">Communication:</span>
+          Oral presentations; technical and multimedia writing; teaching and
+          facilitation.
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-category">External Training:</span>
+          Completed course in Measuring Sexual Orientation, Gender Identity,
+          and Gender Expression (SOGIE) from Johns Hopkins University (JHU)
+          with a scholarship (2026).
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING AND TUTORING -->
     <section>
       <h2>Teaching and Tutoring Experience</h2>
 
@@ -215,11 +557,21 @@
           <span class="entry-title">Statistics Drop-In Tutor</span>
           <span class="entry-date">September 2026–Present</span>
         </div>
-        <div class="entry-subtitle">UW Statistics Tutor &amp; Study Center</div>
+
+        <div class="entry-subtitle">
+          UW Statistics Tutor &amp; Study Center
+        </div>
+
         <ul>
-          <li>Tutor undergraduates for 5.5 hours a week in probability, combinatorics, statistical notation, and R programming.</li>
+          <li>
+            Tutor undergraduates for 5.5 hours a week in probability,
+            combinatorics, statistical notation, and R programming.
+          </li>
           <li>Provide guidance on exam preparedness and study processes.</li>
-          <li>Manage center operations during morning shifts, including attendance logs, student check-ins, and room setup.</li>
+          <li>
+            Manage center operations during morning shifts, including
+            attendance logs, student check-ins, and room setup.
+          </li>
         </ul>
       </div>
 
@@ -228,11 +580,22 @@
           <span class="entry-title">Volunteer Tutor and Study Hall Facilitator</span>
           <span class="entry-date">2022–2024</span>
         </div>
+
         <div class="entry-subtitle">Silvies River Charter School</div>
+
         <ul>
-          <li>Tutored students in mathematics, English, and science, adapting explanations to individual learning needs.</li>
-          <li>Worked with students on developing effective study and learning habits.</li>
-          <li>Developed working knowledge of supporting learners with autism, ADHD, dyslexia, and dysgraphia.</li>
+          <li>
+            Tutored students in mathematics, English, and science, adapting
+            explanations to individual learning needs.
+          </li>
+          <li>
+            Worked with students on developing effective study and learning
+            habits.
+          </li>
+          <li>
+            Developed working knowledge of supporting learners with autism,
+            ADHD, dyslexia, and dysgraphia.
+          </li>
         </ul>
       </div>
 
@@ -241,138 +604,62 @@
           <span class="entry-title">Math Tutor</span>
           <span class="entry-date">2019–2025</span>
         </div>
+
         <div class="entry-subtitle">Independent Virtual Tutoring</div>
+
         <ul>
-          <li>Delivered individualized mathematics tutoring, pairing visual and verbal explanations to match each student's needs.</li>
-          <li>Communicated to parents and/or students to establish tutoring schedules and share learning resources.</li>
+          <li>
+            Delivered individualized mathematics tutoring, pairing visual
+            and verbal explanations to match each student's needs.
+          </li>
+          <li>
+            Communicated with parents and/or students to establish tutoring
+            schedules and share learning resources.
+          </li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">Writing Group Coordinator and Facilitator</span>
+          <span class="entry-title">
+            Writing Group Coordinator and Facilitator
+          </span>
           <span class="entry-date">2020–2025</span>
         </div>
+
         <div class="entry-subtitle">Independent Virtual Writing Groups</div>
+
         <ul>
-          <li>Managed and led weekly group discussions and collaborative projects, allowing students to work at different paces.</li>
-          <li>Independently designed activities for students of varied backgrounds and abilities.</li>
-          <li>Communicated with parents and students to coordinate writing group times, classroom resources, and activity design.</li>
+          <li>
+            Managed and led weekly group discussions and collaborative
+            projects, allowing students to work at different paces.
+          </li>
+          <li>
+            Independently designed activities for students of varied
+            backgrounds and abilities.
+          </li>
+          <li>
+            Communicated with parents and students to coordinate writing
+            group times, classroom resources, and activity design.
+          </li>
         </ul>
       </div>
     </section>
 
-    <section>
-      <h2>Research Experience</h2>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">DESC Evaluation of the STAR Center (Capstone Project)</span>
-          <span class="entry-date">October 2026–Present</span>
-        </div>
-        <div class="entry-subtitle">
-          Affiliation: Downtown Emergency Service Center (DESC), University of Washington<br>
-          Collaborators: Josh Manandhar (MS Student), Tariq Cisse (MS Student)
-        </div>
-        <ul>
-          <li>Working with the Downtown Emergency Service Center (DESC) to analyze the effectiveness of the Stability Through Access and Resources (STAR) Center, alongside its accessibility among varying demographics.</li>
-          <li>Drafting a statistical analysis plan (SAP) for future work in data preprocessing, missing data methods, descriptive analyses, and statistical analyses.</li>
-          <li>Creation of a project management plan (PMP) for even distribution of workload, ensuring utilization of individuals’ specific skills.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Racial Disparities in Cesarean Birth in the United States</span>
-          <span class="entry-date">March 2026–Present</span>
-        </div>
-        <div class="entry-subtitle">
-          Affiliation: University of Washington<br>
-          Collaborators: Dr. Ellen Kauffman (Clinician), Dr. Kathleen Kerr (Biostatistician)
-        </div>
-        <ul>
-          <li>Analyze CDC National Vital Statistics System (NVSS) natality data to investigate racial disparities in cesarean birth, induction of labor, and birth pathways.</li>
-          <li>Develop and implement data preprocessing workflows in Python to filter large public-use datasets, transform variables, and compress files for efficient analysis.</li>
-          <li>Conduct stratified analyses in R and develop data visualizations to characterize differences in birth outcomes across racial groups, regions, and comorbidity burden.</li>
-          <li>Communicate analytical decisions and findings to clinical and quantitative collaborators through visualizations and written summaries.</li>
-          <li>Co-author a manuscript and a research letter examining racial disparities in cesarean birth and trial of labor after cesarean (TOLAC) and vaginal birth after cesarean (VBAC) outcomes.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Evaluating ChatGPT-Generated Poetry (Independent Project)</span>
-          <span class="entry-date">2023–2024</span>
-        </div>
-        <div class="entry-subtitle">
-          Affiliation: University of Illinois Springfield<br>
-          Supervisor: Dr. Hei-Chi Chan
-        </div>
-        <ul>
-          <li>Designed a study evaluating AI-generated poetry using structured linguistic and statistical criteria.</li>
-          <li>Presented findings at the UIS STARS Symposium and discussed the project in an interview with the UIS AI Campus Learning Community.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Skills and External Training</h2>
-
-      <div class="skills-grid">
-        <div class="skill-row">
-          <span class="skill-category">Statistics:</span>
-          Regression and generalized linear models; statistical inference; resampling and cross-validation; longitudinal and missing data methods; machine learning; data visualization; design of statistical analysis plans (SAPs).
-        </div>
-
-        <div class="skill-row">
-          <span class="skill-category">Software:</span>
-          Fluent in R; proficient in Python for data preprocessing and select machine learning methods; Excel; proficient in LaTeX; working proficiency in HTML.
-        </div>
-
-        <div class="skill-row">
-          <span class="skill-category">Communication:</span>
-          Oral presentations; technical and multimedia writing; teaching and facilitation.
-        </div>
-
-        <div class="skill-row">
-          <span class="skill-category">External Training:</span>
-          Completed course in Measuring Sexual Orientation, Gender Identity, and Gender Expression (SOGIE) from Johns Hopkins University (JHU) with a scholarship (2026).
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Research Manuscripts, Presentations, and Poetry Publication</h2>
-
-      <div class="publication-subheading">Manuscripts in Preparation</div>
-      <ul>
-        <li>Kauffman, E., Soares, Nicolas E., &amp; Kerr, K. <em>Racial Disparity in Cesarean Birth and Induction of Labor</em> (working title). Article in preparation for <em>Journal of Racial and Ethnic Disparities</em>.</li>
-        <li>Kauffman, E., Soares, Nicolas E., &amp; Kerr, K. <em>TOLAC, VBAC, and TOLAC Success Rates in Reference to Race and Region</em> (working title). Research letter in preparation for <em>Obstetrics &amp; Gynecology</em> (the Green Journal).</li>
-      </ul>
-
-      <div class="publication-subheading">Symposium Presentation</div>
-      <ul>
-        <li>Soares, Nicolas E. (2024). “Evaluating ChatGPT's Capabilities in Form-Based Poetry Generation.” UIS STARS Symposium. Awarded Best Presentation in Humanities.</li>
-      </ul>
-
-      <div class="publication-subheading">Publication of Poetry</div>
-      <ul>
-        <li>Soares, Nicos. (2025). “If We Want to Last.” <em>Violet Margin</em>, University of Illinois at Springfield.</li>
-        <li>Soares, Helena [Nicolas]. (2023). “Poetic Equations.” <em>Mathematics Teacher: Learning and Teaching PK-12</em>, National Council of Teachers of Mathematics.</li>
-        <li>Soares, Helena [Nicolas]. (2021). “This Fundamental Theorem - A Found Poem.” Honorable mention from the Steven H. Strogatz Prize for Math Communication, National Museum of Math.</li>
-        <li>Soares, Helena [Nicolas]. (2019 and 2020). “Nature” and “The Water Bear Sonnet.” Winner of the student poetry contest, Oregon Poetry Association.</li>
-      </ul>
-    </section>
-
+    <!-- ACADEMIC SERVICE -->
     <section>
       <h2>Academic Service</h2>
 
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">Anti-Racism and Equity Committee, Alumni Representative</span>
+          <span class="entry-title">
+            Anti-Racism and Equity Committee, Alumni Representative
+          </span>
           <span class="entry-date">August 2026–Present</span>
         </div>
+
         <div class="entry-subtitle">UIS Department of English</div>
+
         <ul>
           <li>Plan and initiate departmental outreach and committee-led events.</li>
         </ul>
@@ -380,16 +667,24 @@
 
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">Equity, Diversity, and Inclusion Committee, Member</span>
+          <span class="entry-title">
+            Equity, Diversity, and Inclusion Committee, Member
+          </span>
           <span class="entry-date">October 2025–May 2026</span>
         </div>
+
         <div class="entry-subtitle">UW Department of Biostatistics</div>
+
         <ul>
-          <li>Help coordinate community-building and communication initiatives, including a coat swap, newsletter, and book club.</li>
+          <li>
+            Help coordinate community-building and communication initiatives,
+            including a coat swap, newsletter, and book club.
+          </li>
         </ul>
       </div>
     </section>
 
   </main>
+
 </body>
 </html>
